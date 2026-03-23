@@ -13,6 +13,17 @@ This is a **pure documentation repository** — a curated index of AI tools, fra
 - `SUMMARY.md` — Quick overview
 - `README.md` — Entry point (minimal)
 
+Individual topic notes live in numbered subdirectories mirroring the six sections:
+
+- `01_ai_tools/` — Detailed notes on AI tools and agents
+- `02_dev_frameworks/` — Dev framework deep-dives
+- `03_model_resources/` — Model implementation notes
+- `04_context_memory/` — Context/memory system notes
+- `05_claude_code_ecosystem/` — Claude Code skills and ecosystem
+- `06_learning_resources/` — Tutorials, courses, notable developers
+
+Each subdirectory file follows the same template: project name as H1, a brief intro, core features, technical notes, and a GitHub link.
+
 ## Content Organization
 
 The main index (`100.ai_study_index.md`) is divided into six sections:
