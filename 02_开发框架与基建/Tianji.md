@@ -17,7 +17,7 @@
 ## 技术特点
 
 - Python + LangChain 技术栈
-- 支持 Qwen、ChatGLM 等中文开源模型
+- 支持 Qwen 等中文开源模型
 - 提供完整的数据集和微调脚本
 
 ## 使用场景
