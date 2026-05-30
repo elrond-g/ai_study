@@ -1,39 +1,33 @@
-# taste-skill 合集
+# Taste Skill
 
-> https://github.com/Leonxlnx/taste-skill
+Anti-Slop 前端框架，为 AI Agent 注入"品味"。提供可移植的 Agent Skills，升级 AI 生成的界面：更强的布局、排版、动效和间距，告别千篇一律的模板化 UI。同时包含用于参考板、品牌套件的图像生成技能。
 
-## 项目简介
+## 核心特性
 
-taste-skill 是一个包含四个互补 Skill 的 Claude Code Skill 合集，专注于提升 AI 输出的品味、设计感和表达质量：taste-skill、redesign-skill、output-skill 和 soft-skill。
+### Agent Skills 格式
+遵循 agentskills.io 标准，可安装到 Codex、Cursor、Claude Code 等主流 AI 编程工具。
 
-## 四个 Skill 详解
+### 前端品味升级
+通过 Skills 文件注入设计原则和约束，让 AI 生成的 UI 更具设计感，而非千篇一律的 boilerplate。
 
-### taste-skill
-- 核心：建立 AI 的审美判断力
-- 功能：从品味角度评估和优化 UI/UX、文案、设计方案
-- 适用：任何需要"好看好用"的场景
+### 图像生成技能
+内置参考板（web、mobile、brand kits）生成技能，配合 AI 图像生成器使用，再交给 Code Agent 实现。
 
-### redesign-skill
-- 核心：系统性重新设计现有界面
-- 功能：分析现有设计的问题，提出完整的重设计方案
-- 适用：改版、重构 UI
+### 一键安装
+通过 npx skills add 一键安装全部或单个技能。
 
-### output-skill
-- 核心：优化 AI 输出的格式和表达
-- 功能：让 AI 的文字输出更清晰、更有结构、更易读
-- 适用：文档写作、内容生成
+## 技术架构
 
-### soft-skill
-- 核心：软技能和沟通风格优化
-- 功能：调整 AI 的沟通语气，使其更自然、更有温度
-- 适用：面向用户的文本生成
+- **格式**：agentskills.io SKILL.md 标准
+- **安装**：npx skills add
+- **兼容**：Codex、Cursor、Claude Code
 
-## 使用场景
+## 安装与使用
 
-- 产品设计师用 AI 快速迭代设计方案
-- 内容创作者提升 AI 生成内容的可读性
-- 开发者改善产品的整体体验细节
+```bash
+npx skills add https://github.com/Leonxlnx/taste-skill
+```
 
-## 相关链接
+## GitHub
 
-- GitHub: https://github.com/Leonxlnx/taste-skill
+https://github.com/Leonxlnx/taste-skill

@@ -1,71 +1,36 @@
 # Agent Governance Toolkit
 
-> GitHub | https://github.com/microsoft/agent-governance-toolkit
+微软出品的 AI Agent 治理工具包。覆盖策略执行、零信任身份、执行沙箱和可靠性工程四大领域，覆盖 OWASP Agentic Top 10 全部 10 项风险。支持 Python（pip）、TypeScript（npm）、C#（NuGet）。
 
-## 项目简介
+## 核心特性
 
-微软开源的 AI Agent 治理工具包，提供运行时治理基础设施——确定性策略执行、零信任身份、执行沙盒和可靠性工程。覆盖 OWASP Agentic Top 10 全部 10 项风险，9,500+ 测试用例。支持 Python/TypeScript/.NET/Rust/Go 五种语言 SDK。
+### 策略执行
+定义 Agent 可执行操作的细粒度策略——有 send_email 和 query_database 权限的 Agent 不应能执行 drop_table。
 
-## 核心定位
+### 零信任身份
+多 Agent 系统中，即使共享 API Key，也能追踪每个具体 Agent 的操作，实现操作级归属。
 
-> **治理 Agent 的行为（工具调用、资源访问、Agent 间通信），而非模型输出内容。**
+### 执行沙箱
+为 Agent 的工具调用提供安全隔离的执行环境，防止越权操作。
 
-不是模型安全或 Prompt 护栏工具，不过滤 LLM 输入/输出，而是在应用层治理 Agent 的实际操作。
+### 可审计性
+提供防篡改的操作审计日志，满足合规和监管要求。
 
-## 核心功能
+### OWASP 全覆盖
+覆盖 OWASP Agentic Top 10 全部 10 项安全风险。
 
-### 确定性策略执行
-- 每个 Agent 操作在执行前经过策略评估，亚毫秒延迟（<0.1ms）
+## 技术架构
 
-### 零信任 Agent 身份
-- Ed25519 加密凭证
-- SPIFFE/SVID 支持
-- 0-1000 信任评分
+- **语言支持**：Python（PyPI）、TypeScript（npm）、C#（NuGet）
+- **许可**：MIT
+- **框架无关**：与具体 Agent 框架解耦
 
-### 执行沙盒
-- 4 层特权环
-- Saga 编排
-- 终止控制 + Kill Switch
-
-### Agent SRE
-- SLO、错误预算
-- 回放调试
-- 混沌工程、熔断器
-- 渐进式发布
-
-### MCP 安全扫描器
-- 检测工具投毒、Typosquatting、隐藏指令、Rug-pull 攻击
-
-## 框架集成
-
-兼容 12+ 框架：LangChain、CrewAI、AutoGen、Dify、LlamaIndex、OpenAI Agents、Google ADK、Azure AI 等。纯 `pip install` 零厂商锁定。
-
-## 安装
+## 安装与使用
 
 ```bash
-# Python
-pip install agent-governance-toolkit[full]
-
-# TypeScript
-npm install @agentmesh/sdk
-
-# .NET
-dotnet add package Microsoft.AgentGovernance
+pip install agent-governance-toolkit
 ```
 
-## OWASP Agentic Top 10 覆盖
+## GitHub
 
-10/10 全覆盖，ASI-01 到 ASI-10 每项风险都有专门控制。
-
-## 技术规格
-
-- **语言**：Python / TypeScript / .NET / Rust / Go
-- **Stars**：450+
-- **许可证**：MIT
-- **测试**：9,500+
-
-## 相关链接
-
-- GitHub: https://github.com/microsoft/agent-governance-toolkit
-- OWASP 合规: https://github.com/microsoft/agent-governance-toolkit/blob/main/docs/OWASP-COMPLIANCE.md
-- 架构文档: https://github.com/microsoft/agent-governance-toolkit/blob/main/docs/ARCHITECTURE.md
+https://github.com/microsoft/agent-governance-toolkit
